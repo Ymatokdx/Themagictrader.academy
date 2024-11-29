@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أكاديمية TMT</title>
+  <style>
+    /* تصميم عام */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #333;
+      scroll-behavior: smooth;
+      direction: rtl;
+    }
+
+    :root {
+      --black: #000;
+      --white: #fff;
+      --gold: #d4af37;
+    }
+
+    /* القائمة العلوية */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--black);
+      color: var(--gold);
+      padding: 1rem 2rem;
+      z-index: 1000;
+    }
+
+    .navbar .menu {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .navbar .menu a {
+      text-decoration: none;
+      color: var(--gold);
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    .navbar .menu a:hover {
+      color: var(--white);
+    }
+
+    /* الأقسام */
+    section {
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .hero-section {
+      background: var(--black);
+      color: var(--gold);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .hero-section img {
+      width: 150px;
+      margin-bottom: 1rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero-section h1 {
+      font-size: 2.5rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero-section .btn {
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      background: var(--gold);
+      color: var(--black);
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .hero-section .btn:hover {
+      background: var(--black);
+      color: var(--gold);
+      transform: scale(1.1);
+    }
+
+    .about-section, .contact-section {
+      background: var(--white);
+      color: var(--black);
+    }
+
+    .about-section h2, .contact-section h2 {
+      font-size: 2rem;
+      color: var(--gold);
+    }
+
+    .contact-section a {
+      display: block;
+      text-decoration: none;
+      margin: 1rem 0;
+      color: var(--gold);
+      font-size: 1.2rem;
+      transition: transform 0.3s;
+    }
+
+    .contact-section a:hover {
+      color: var(--black);
+      transform: scale(1.1);
+    }
+
+    /* أنيميشن */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* تصميم متجاوب */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: row;
+        justify-content: center;
+        padding: 1rem;
+      }
+
+      .navbar .menu {
+        gap: 1rem;
+      }
+
+      .hero-section h1 {
+        font-size: 2rem;
+      }
+
+      .hero-section img {
+        width: 120px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .navbar {
+        padding: 0.5rem;
+      }
+
+      .navbar .menu a {
+        font-size: 0.9rem;
+      }
+
+      .hero-section {
+        padding: 1rem;
+      }
+
+      .hero-section h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero-section img {
+        width: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- القائمة -->
+  <div class="navbar">
+    <div class="menu">
+      <a href="#home">الرئيسية</a>
+      <a href="#about">من نحن</a>
+      <a href="#contact">تواصل معنا</a>
+    </div>
+  </div>
+
+  <!-- قسم الصفحة الرئيسية -->
+  <section id="home" class="hero-section">
+    <img src="file-NGquaYAvsR4DwvRYRaEVvU" alt="TMT Logo">
+    <h1>مرحبًا بكم في TMT 🌟</h1>
+    <button class="btn" onclick="scrollToSection('#contact')">ابدأ الآن 🚀</button>
+  </section>
+
+  <!-- قسم من نحن -->
+  <section id="about" class="about-section">
+    <h2>من نحن؟ 💡</h2>
+    <p>نحن فريق TMT المتخصص في تعليم التداول الحلال بأسلوب مبتكر، وهدفنا مساعدتكم لتحقيق النجاح في سوق الكريبتو! 💪</p>
+  </section>
+
+  <!-- قسم التواصل -->
+  <section id="contact" class="contact-section">
+    <h2>تواصل معنا 📬</h2>
+    <p>يمكنك الوصول إلينا عبر القنوات التالية:</p>
+    <a href="https://t.me/your_telegram_username" target="_blank">📩 رسائل تيليغرام</a>
+    <a href="https://www.instagram.com/tmtacademy01/profilecard/?igsh=MXBhcGFvOHpwbXFmNw==" target="_blank">📸 إنستغرام</a>
+    <a href="https://www.facebook.com/profile.php?id=61566551799016&mibextid=ZbWKwL" target="_blank">📘 فيسبوك</a>
+  </section>
+
+  <script>
+    function scrollToSection(sectionId) {
+      document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
